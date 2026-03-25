@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // Main Class (UC2)
 public class BookMyStayApp {
 
@@ -43,5 +46,15 @@ public class BookMyStayApp {
         suite.displayRoomDetails();
         System.out.println("Available: " + inventory.getAvailability(suite.getRoomType()));
         System.out.println("--------------------------------------");
+        List<Room> rooms = new ArrayList<>();
+        rooms.add(new SingleRoom());
+        rooms.add(new DoubleRoom());
+        rooms.add(new SuiteRoom());
+
+        // Use RoomInventory from UC3
+
+        RoomSearchService service = new RoomSearchService();
+
+        service.searchRooms(rooms, inventory);
     }
 }
