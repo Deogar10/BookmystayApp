@@ -26,5 +26,22 @@ public class BookMyStayApp {
         System.out.println("--------------------------------------");
 
         System.out.println("\nApplication Terminated.");
+
+
+        RoomInventory inventory = new RoomInventory();
+
+        System.out.println("===== Centralized Room Inventory =====\n");
+
+        single.displayRoomDetails();
+        System.out.println("Available: " + inventory.getAvailability(single.getRoomType()));
+        System.out.println("--------------------------------------");
+
+        doubleRoom.displayRoomDetails();
+        System.out.println("Available: " + inventory.getAvailability(doubleRoom.getRoomType()));
+        System.out.println("--------------------------------------");
+
+        suite.displayRoomDetails();
+        System.out.println("Available: " + inventory.getAvailability(suite.getRoomType()));
+        System.out.println("--------------------------------------");
     }
 }
