@@ -19,4 +19,7 @@ class RoomSearchService {
             }
         }
     }
+
+    public void processBookings(BookingRequestQueue queue, RoomInventory inventory) {
+    }
 }
