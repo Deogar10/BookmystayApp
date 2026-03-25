@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 // Main Class (UC2)
 public class BookMyStayApp {
@@ -65,5 +67,7 @@ public class BookMyStayApp {
 
         // Process queue
         queue.processRequests();
+        service.processBookings(queue, inventory);
+
     }
 }
