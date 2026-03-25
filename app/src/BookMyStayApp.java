@@ -56,5 +56,14 @@ public class BookMyStayApp {
         RoomSearchService service = new RoomSearchService();
 
         service.searchRooms(rooms, inventory);
+        BookingRequestQueue queue = new BookingRequestQueue();
+
+        // Adding requests (arrival order)
+        queue.addRequest(new Reservation("Abhi", "Single"));
+        queue.addRequest(new Reservation("Subha", "Double"));
+        queue.addRequest(new Reservation("Vanmathi", "Suite"));
+
+        // Process queue
+        queue.processRequests();
     }
 }
